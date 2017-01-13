@@ -15,20 +15,37 @@ public class Assignment7 {
 	String binary = Integer.toBinaryString(in);
 	String[] binary2 = binary.split("");
 	
-	for (int i = 0 ;i < 0; i++)
-	for (int j = 0 ; j < i; j++)
-	{
-		System.out.println("No. consutive 1's");
-	}
+	int max = 0;
+	int finalmax = 0;
 	
-	
+	System.out.print("Binnary value is: ");
+		
+		for (int i = 0; i < binary2.length; i++)
+	{	
+			
+				System.out.print(binary2 [i]);	
+		
 	}
-//	
-//	for (int i1 = 0; i1 < x; i1++)
-//	{	
-//		System.out.println(binary2 [i1]);	
-//	}
-//	}
+		for (int i = 0; i < binary2.length; i++)
+		{
+			if( binary2[i].equals("1"))
+			{
+				 max++;
+			}
+			else 
+			{
+				max = 0;
+			}
+			if(max > finalmax)
+			{
+			finalmax = max;
+			}
+			
+		}
+		System.out.print("\n Consutive 1's are: ");
+			System.out.print(finalmax);	
+		
+	}
 	
 	
 	public static void main(String a[]){
